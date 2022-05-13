@@ -12,7 +12,7 @@
     padding: 0;
 }
 
-@media (max-width: 1920px), (max-height: 1080px) {
+
 body {
     width: 100vw;
     height: 100vh;
@@ -171,4 +171,25 @@ label {
 label:hover {
     background-color: var(--white);
 }
+
+
+@media (max-width: 768px) {
+    .image {
+        gap: 5rem;
+    }
+    .image .img {
+        background-color: transparent;
+    }
+    .sub {
+        display: block;
+        margin: 0 auto;
+        padding-top: 0;
+        max-width: 100%;
+        font-size: 1.2rem;
+    }
+    .labels {
+        padding: 0;
+        margin: 2rem 0 4rem;
+        justify-content: center;
+    }
 }
