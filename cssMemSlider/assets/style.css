@@ -121,6 +121,7 @@ input {
 #eighth:checked~.labels #label8:hover {
     border-color: var(--white);
 }
+
 #second:checked~.all_slide {
     transform: translateX(-12.5%);
 }
@@ -153,10 +154,9 @@ input {
     display: flex;
     justify-content: flex-end;
     gap: 0.5rem;
-    height: 2rem;
+    height: 4rem;
     margin-top: 2rem;
-    padding-right: 1rem;
-    
+    padding-right: 1rem; 
 }
 
 label {
@@ -168,10 +168,21 @@ label {
     transition: all 0.2s;
 }
 
+.label-container {
+    width: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
 label:hover {
     background-color: var(--white);
 }
 
+label:active {
+    opacity: .7;
+}
 
 @media (max-width: 768px) {
     .image {
