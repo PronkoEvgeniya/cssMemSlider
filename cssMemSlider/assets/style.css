@@ -98,14 +98,14 @@ input {
 #first:checked~.all_slide {
     transform: translateX(0%);
 }
-#first:checked~.labels #label1,
-#second:checked~.labels #label2,
-#third:checked~.labels #label3,
-#fourth:checked~.labels #label4,
-#fifth:checked~.labels #label5,
-#sixth:checked~.labels #label6,
-#seventh:checked~.labels #label7,
-#eighth:checked~.labels #label8 {
+#first:checked~.labels #label1 span,
+#second:checked~.labels #label2 span,
+#third:checked~.labels #label3 span,
+#fourth:checked~.labels #label4 span,
+#fifth:checked~.labels #label5 span,
+#sixth:checked~.labels #label6 span,
+#seventh:checked~.labels #label7 span,
+#eighth:checked~.labels #label8 span {
     border: 0.3rem solid var(--red);
     background-color: transparent;
     width: 1.1rem;
@@ -153,13 +153,18 @@ input {
 .labels {
     display: flex;
     justify-content: flex-end;
-    gap: 0.5rem;
     height: 4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-right: 1rem; 
 }
 
 label {
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+label span {
+    display: block;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
@@ -168,19 +173,13 @@ label {
     transition: all 0.2s;
 }
 
-.label-container {
-    width: 2rem;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
-label:hover {
+label span:hover, 
+label:hover span {
     background-color: var(--white);
 }
 
-label:active {
+label span:active,
+label:active span{
     opacity: .7;
 }
 
@@ -192,8 +191,7 @@ label:active {
         background-color: transparent;
     }
     .sub {
-        display: block;
-        margin: 0 auto;
+        margin: 0;
         padding-top: 0;
         max-width: 100%;
         font-size: 1.2rem;
@@ -203,4 +201,25 @@ label:active {
         margin: 2rem 0 4rem;
         justify-content: center;
     }
+
+    label {
+        padding: 0.5rem;
+    }
+    label span {
+        width: 1rem;
+        height: 1rem;
+    }
+    #first:checked~.labels #label1 span,
+    #second:checked~.labels #label2 span,
+    #third:checked~.labels #label3 span,
+    #fourth:checked~.labels #label4 span,
+    #fifth:checked~.labels #label5 span,
+    #sixth:checked~.labels #label6 span,
+    #seventh:checked~.labels #label7 span,
+    #eighth:checked~.labels #label8 span {
+    border: 0.3rem solid var(--red);
+    background-color: transparent;
+    width: 0.6rem;
+    height: 0.6rem;
+}
 }
